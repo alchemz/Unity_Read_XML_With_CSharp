@@ -17,43 +17,44 @@ public class LoadXml:MonoBehavior{
 	
 	void Start()
 	{
-	DontDestroyOneLoad(gameObject);
-	LoadXML();
-	StartCoroutine("AssignData');
-	
+		DontDestroyOneLoad(gameObject);
+		LoadXML();
+		StartCoroutine("AssignData");	
 	}
+	
 	void Update()
 	{
-	if(finishedLoading)
-	{
-	Application.LoadLevel("TestScene");
-	finishedLoading=false;
-	}
+		if(finishedLoading)
+		{
+		Application.LoadLevel("TestScene");
+		finishedLoading=false;
+		}
 	}
 	
 	void LoadXML()
 	{	
-	xmlDoc=XDocument.Load("Assets/Resources/XML Files/circles.xml");
-	items= xmlDoc.Descendants("pages").Elements();
+		xmlDoc=XDocument.Load("Assets/Resources/XML Files/circles.xml");
+		items= xmlDoc.Descendants("pages").Elements();
 	}
 	
 	IEnumerator AssignData()
 	{
-	foreach(var item in items)
-	{
-	if(item.Parent.Attribute("number").Value==iteration.ToString())
-	{
-	pageNum=in.Parse(item.Parent.Attribute("number").Value);
-	charText=item.Parent.Element("name").Value.Trim();
-	dialogueText=item.Parent.Element("dialogue").Value.Trim();
+		foreach(var item in items)
+		{
+			if(item.Parent.Attribute("number").Value==iteration.ToString())
+			{
+				pageNum=in.Parse(item.Parent.Attribute("number").Value);
+				charText=item.Parent.Element("name").Value.Trim();
+				dialogueText=item.Parent.Element("dialogue").Value.Trim();
 	
-	data.Add(new XMLData(pageNum, charText, dialogueText));
+				data.Add(new XMLData(pageNum, charText, dialogueText));
 	
-	Debug.Log(data[iteration].dialogueText);
-	iteration++;
-	}
-	}
-	finishedLoading=true;
-	}
+				Debug.Log(data[iteration].dialogueText);
+				iteration++;
+			}
+		}
 		
+		finishedLoading=true;
+	}
+			
 }

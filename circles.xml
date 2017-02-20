@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<chapter_1 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance”>
+<chapter_1 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instanceâ€>
 	<page number="1">
 	<name>Mark </name>
 	<dialogue>This is a test!</dialogue>
@@ -15,30 +15,21 @@
 	<dialogue>This is a test!</dialogue>
 	</page>
 
-	<page number = “4”>
-
+	<page number = â€œ4â€>
 	<name>Kristie</name>
-
 	<dialogue>This is a fourth test.</dialogue>
-
 	</page>
 
 
-	<page number = “5”>
-
+	<page number = â€œ5â€>
 	<name>Jeff</name>
-
 	<dialogue>This is a fifth test.</dialogue>
-
 	</page>
 
 
-	<page number = “6”>
-
+	<page number = â€œ6â€>
 	<name>Frank</name>
-
 	<dialogue>This is a sixth test.</dialogue>
-
 	</page>
 
 </page>

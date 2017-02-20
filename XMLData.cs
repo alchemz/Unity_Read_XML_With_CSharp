@@ -4,8 +4,8 @@ public class XMLData{
 	public string CharText, dialogueText;
 	public XMLData(int page, string character, string dialogue)
 	{
-	pageNum=page;
-	charText=character;
-	dialogueText=dialogue;
+		pageNum=page;
+		charText=character;
+		dialogueText=dialogue;
 	}
 }

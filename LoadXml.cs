@@ -41,10 +41,10 @@ public class LoadXml:MonoBehavior{
 	{
 		foreach(var item in items)
 		{
-			if(item.Parent.Attribute("number").Value==iteration.ToString())
+			if(item.Parent.Attribute("id").Value==iteration.ToString())
 			{
-				pageNum=in.Parse(item.Parent.Attribute("number").Value);
-				charText=item.Parent.Element("name").Value.Trim();
+				pageNum=in.Parse(item.Parent.Attribute("id").Value);
+				charText=item.Parent.Element("uri").Value.Trim();
 				dialogueText=item.Parent.Element("dialogue").Value.Trim();
 	
 				data.Add(new XMLData(pageNum, charText, dialogueText));
